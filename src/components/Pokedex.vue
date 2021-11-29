@@ -1,8 +1,15 @@
 <template>
   <div class="container">
-    <h1>🍃 {{ pokemonName }} 🐸</h1>
-    <img :src="pokemonImg" :alt="pokemonName" />
-    <h2>{{ pokemonId }}</h2>
+    <img class="pokedex" src="https://wallpaperaccess.com/full/5818306.jpg" alt="pokedex">
+    <div class="screen">
+      <div class="pokeImage">
+        <img class="pokemon" :src="pokemonImg" :alt="pokemonName" />
+      </div>
+      <div class="pokeInfo">
+        <h2>{{ pokemonId }}</h2>
+        <h2> {{ pokemonName }} </h2>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,10 +48,29 @@ export default {
 .container {
   width: 600px;
   height: 800px;
-  background-color: red;
 }
-img {
-  width: 200px;
-  height: 200px;
+.pokemon {
+  width: 100px;
+  height: 100px;
 }
+.pokedex {
+  width: 227px;
+  height: 437px;
+}
+.screen {
+  /* background-color: aquamarine; */
+  width: 227px;
+  height: 237px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translate(186px, -340px);
+
+}
+.pokeInfo {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+}
+
 </style>

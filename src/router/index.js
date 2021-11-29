@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import PokedexView from "../views/PokedexView.vue";
 
 Vue.use(VueRouter);
 
@@ -8,7 +7,7 @@ const routes = [
   {
     path: "/",
     name: "Pokedex",
-    component: PokedexView
+    component: () => import("../views/HomeView.vue")
   },
   {
     path: "/:id",
